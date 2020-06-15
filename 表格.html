@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+</head>
+<style>
+    .first>td{
+        /* 字体加粗 */
+        /* font-weight: 700; */
+        font-weight:bold;
+    }
+    table{
+        border: 1px solid #000;
+        /* 设置边框折叠 */
+        border-collapse: collapse;
+    }
+    th,tr,td{
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <!-- table,tr,td都为块元素 -->
+    <!-- table表格标签 -->
+    <table>
+        <!-- 表头 -->
+        <thead>
+            <!-- tr 行 -->
+            <tr>
+                <!-- th 单元格(文字是加粗的) -->
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 -->
+        <tbody>
+            <tr>
+                <!-- td 单元格或者列 -->
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+                <td>444</td>
+                <td>555</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+                <td>444</td>
+                <td>555</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+                <td>444</td>
+                <td>555</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+                <td>444</td>
+                <td>555</td>
+            </tr>
+        </tbody>
+        <!-- 脚注：表格最下面一行 -->
+        <tfoot>
+            <!-- <tr>
+                <td>tr是单元格</td>
+            </tr> -->
+        </tfoot>
+    </table>
+
+    <div>
+            ************分界线************
+    </div>
+    
+
+
+
+
+    <!-- 实际开发中的写法 -->
+    <table>
+        <tr class="first">
+            <td>星期一</td>
+            <td>星期二</td>
+            <td>星期三</td>
+            <td>星期四</td>
+            <td>星期五</td>
+        </tr>
+        <tr>
+            <!-- 合并行(垂直， 行) -->
+            <td rowspan="4">111</td>
+            <td>222</td>
+            <td>333</td>
+            <!-- 合并列(水平，单元格) -->
+            <td colspan="2">666</td>
+            <!-- <td>666</td> -->
+        </tr>
+        <tr>
+            <!-- <td>111</td> -->
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+        </tr>
+        <tr>
+            <!-- <td>111</td> -->
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+        </tr>
+        <tr>
+            <!-- <td>111</td> -->
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+        </tr>
+    </table>
+</body>
+</html>

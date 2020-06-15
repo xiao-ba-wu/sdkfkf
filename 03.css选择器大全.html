@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css选择器大全</title>
+</head>
+<style>
+    /* div标签选择器，选择页面中所有的div标签 */
+    div{
+        font-size: 20px;
+    }
+    /* d1类名选择器，选择页面中所有类名叫d1的元素，一个页面中可以有许多相同的类名 */
+    /* 类名选择器格式：.类名 */
+    .d1{
+        background-color: red;
+    }
+    /* id选择器，选择id名为second那个的元素，id具有唯一性，一个页面上所有的id名都不能相同 */
+    /* id选择器格式：#id名 */
+    #second{
+        width: 400px;
+        height: 400px;
+        background-color: green;
+    }
+    /* 选择页面中类名为d2，id名为second的div元素 */
+    /* 多个选择器之间可以连写，并且表示，满足这几个条件的选择器 */
+    div.d2#second{
+        font-weight: bold;
+    }
+    
+    /* 同时选择id为fouth和firth的元素 */
+    #fouth,#firth{
+        background-color: blue;
+    }
+    .d3,#fouth{
+        color: teal;
+    }
+    
+    /* 选择section里面id为firth的元素 */
+    section #firth{
+        color: tomato;
+    }
+    
+    /* 选择section中所有div子元素，包含子元素的子元素 */
+    section div{
+        background-color: pink;
+    }
+    /* 选择section中所有div子元素,不包含子元素的子元素 */
+    section>div{
+        font-size: 50px;
+    }
+</style>
+<body>
+    <!-- div标签名  class类名  class="d1"元素的属性 id是id名 -->
+    <div class="d1">第一行</div>
+    <div class="d2" id="second">第二行</div>
+    <div class="d3">第三行</div>
+
+    <br>
+    <hr>
+    <br>
+
+    <section>
+        <div class="d" id="fouth">第四行</div>
+        <div class="d" id="firth">第五行</div>
+        <div class="d">第六行</div>
+        <div class="d">
+            aaaaaaa
+            <div class="chirld">第七行</div>
+        </div>
+    </section>
+
+    <br>
+    <hr>
+    <br>
+    
+</body>
+</html>
